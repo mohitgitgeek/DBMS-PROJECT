@@ -1,0 +1,302 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* App-specific layout & theme */
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f0f7ff 0%, #f8f0ff 50%, #fff7f0 100%);
+  padding: 2rem;
+}
+.app-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(250,250,255,0.98));
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(16,24,40,0.12);
+  overflow: hidden;
+}
+.app-header {
+  padding: 22px 28px;
+  background: linear-gradient(90deg, #ff7a7a 0%, #ffd56b 35%, #7ae7c7 70%, #7aa2ff 100%);
+  color: white;
+}
+.app-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+}
+.app-title-icon {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+}
+.app-subtitle {
+  margin-top: 6px;
+  color: rgba(255,255,255,0.95);
+  opacity: 0.95;
+}
+
+/* Tabs styling */
+.card > .tabs { display: none; }
+.tabs-row { display:flex; gap:8px; padding:12px 18px; flex-wrap:wrap; background:transparent; }
+.tab-button {
+  border: none;
+  padding:10px 14px;
+  border-radius:10px;
+  background: rgba(255,255,255,0.6);
+  color: #0f172a;
+  font-weight:600;
+  cursor:pointer;
+  transition:all 0.18s ease;
+}
+.tab-button:hover{ transform:translateY(-2px); box-shadow:0 6px 18px rgba(2,6,23,0.06);} 
+.tab-button.active{ background: linear-gradient(90deg,#6ee7b7,#60a5fa); color:#032; box-shadow:0 8px 24px rgba(99,102,241,0.18);} 
+
+/* Main content */
+.card .p-6 { padding: 20px 24px; }
+.controls { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:14px; }
+.controls-header { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  gap: 20px; 
+  margin-bottom: 24px; 
+}
+.button-group {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.refresh-btn { display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:10px; border:none; background:#111827; color:white; cursor:pointer; }
+.refresh-btn:hover { background:#1f2937; }
+.refresh-btn[disabled]{ opacity:0.6; cursor:not-allowed; }
+
+.add-new-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: none;
+  background: #059669;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.add-new-btn:hover {
+  background: #047857;
+}
+
+/* Tables and forms */
+table { width:100%; border-collapse:collapse; font-size:0.95rem; }
+thead tr { background: rgba(15,23,42,0.04); }
+th, td { padding:12px 10px; text-align:left; border-bottom:1px solid rgba(15,23,42,0.04); }
+tbody tr:nth-child(odd){ background: rgba(250,250,255,0.6); }
+
+/* Badges and small components */
+.badge { display:inline-block; padding:6px 10px; border-radius:999px; font-weight:700; font-size:0.8rem; }
+.badge.available { background:#e6ffed; color:#056a3d; }
+.badge.occupied { background:#ffe6e6; color:#7a0b0b; }
+
+/* Forms */
+input, select { padding:10px 12px; border-radius:10px; border:1px solid rgba(2,6,23,0.08); background:white; }
+form .grid { display:grid; gap:12px; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); }
+
+/* Responsive tweaks */
+@media (max-width:720px){
+  .app-title{ font-size:1.2rem }
+  .app-container{ padding:0.5rem }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.spin { animation: spin 1s linear infinite; display:inline-block; }
+
+/* Payment Summary Cards - Horizontal Layout */
+.payment-summary-cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.payment-card {
+  flex: 1;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.payment-card-pending {
+  background: #fef3c7;
+}
+
+.payment-card-paid {
+  background: #d1fae5;
+}
+
+.payment-card-revenue {
+  background: #dbeafe;
+}
+
+.payment-card-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.payment-card-pending .payment-card-label {
+  color: #92400e;
+}
+
+.payment-card-paid .payment-card-label {
+  color: #065f46;
+}
+
+.payment-card-revenue .payment-card-label {
+  color: #1e3a8a;
+}
+
+.payment-card-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.payment-card-pending .payment-card-value {
+  color: #78350f;
+}
+
+.payment-card-paid .payment-card-value {
+  color: #064e3b;
+}
+
+.payment-card-revenue .payment-card-value {
+  color: #1e40af;
+}
+
+@media (max-width: 768px) {
+  .payment-summary-cards {
+    flex-direction: column;
+  }
+}
+
+/* Parking Slots Summary Cards - Horizontal Layout */
+.slots-summary-cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.slot-card {
+  flex: 1;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.slot-card-available {
+  background: #d1fae5;
+}
+
+.slot-card-occupied {
+  background: #fee2e2;
+}
+
+.slot-card-total {
+  background: #dbeafe;
+}
+
+.slot-card-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.slot-card-available .slot-card-label {
+  color: #065f46;
+}
+
+.slot-card-occupied .slot-card-label {
+  color: #991b1b;
+}
+
+.slot-card-total .slot-card-label {
+  color: #1e3a8a;
+}
+
+.slot-card-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.slot-card-available .slot-card-value {
+  color: #064e3b;
+}
+
+.slot-card-occupied .slot-card-value {
+  color: #7f1d1d;
+}
+
+.slot-card-total .slot-card-value {
+  color: #1e40af;
+}
+
+@media (max-width: 768px) {
+  .slots-summary-cards {
+    flex-direction: column;
+  }
+}
